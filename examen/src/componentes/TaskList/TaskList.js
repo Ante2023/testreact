@@ -9,7 +9,7 @@ const TaskList = (props) => {
           <table>
             <tr
               onclick={() => {
-                onTaskClicked(element.taskId);
+                props.onTaskClicked(element.taskId);
               }}
             >
               <td> ID {element.taskId}</td>
@@ -24,8 +24,8 @@ const TaskList = (props) => {
   );
 };
 
-const onTaskClicked = (id) => {
+/*const onTaskClicked = (id) => {
   props.onTaskClicked(id);
-};
+};*/
 
 export default TaskList;
