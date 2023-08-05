@@ -1,8 +1,11 @@
 import React from 'react'
+import TaskList from './TaskList/TaskList'
 
 const AppController = () => {
   return (
-	<div>AppController</div>
+	<div>
+    <TaskList/>
+  </div>
   )
 }
 
