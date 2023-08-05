@@ -1,24 +1,28 @@
 import React, { useState } from "react";
+import TaskList from "../TaskList";
 
 
 const TaskList = (props) => {
   return (
     <div>
         <h1>TaskList</h1>
-        <ul className="caught-task-list">
-        {props.taskName.map((taskName) => {
+        {props.data.map((element) => {
           return (
-            <li className="caught-task-list-element" key={taskName}>
-              {taskName}
-            </li>
+            <table> 
+                <tr>
+                    <td>{element.taskId}</td>
+                    <td>{element.title}</td>
+                    <td>{element.description}</td>
+                    <td>{element.priority}</td>
+                </tr>
+            </table>
           );
         })}
-      </ul>
-      <div className="caught-pokemon-info">
-        <p>{"Las tareas del día pendiente son " + props.taskName.length + " Pokémon on " + props.}</p>
       </div>
     </div>
   );
 };
+
+
 
 export default TaskList;

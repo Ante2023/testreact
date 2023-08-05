@@ -1,12 +1,9 @@
 import React from 'react'
-import TaskList from './TaskList/TaskList'
 
 const AppController = () => {
   return (
-	<div>
-    <TaskList/>
-  </div>
+	<div>AppController</div>
   )
 }
 
-export default AppController
+export default AppController;
