@@ -1,8 +1,12 @@
 import React from 'react'
+import TaskItem from './taskItem'
 
 const AppController = () => {
   return (
-	<div>AppController</div>
+	<div>AppController
+     <TaskItem/>
+  </div>
+ 
   )
 }
 
