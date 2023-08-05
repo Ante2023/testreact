@@ -1,10 +1,19 @@
-import React from 'react'
+import React from "react";
 
 const TaskList = (props) => {
-	console.log(props);
+  console.log(props);
   return (
-	<div>TaskList</div>
-  )
-}
+    <div>
+      {" "}
+      <h1
+        onClick={() => {
+          props.getId("2");
+        }}
+      >
+        Dame ID
+      </h1>
+    </div>
+  );
+};
 
-export default TaskList
+export default TaskList;

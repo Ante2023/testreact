@@ -1,6 +1,7 @@
 import React from 'react'
 
-const TaskItem = () => {
+const TaskItem = (props) => {
+	console.log(props);
   return (
 	<div>TaskItem</div>
   )
