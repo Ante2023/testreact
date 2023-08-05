@@ -7,15 +7,21 @@ const TaskList = (props) => {
       {props.data.map((element) => {
         return (
           <table>
+            <th>
+              <td> ID </td>
+              <td> Title </td>
+              <td> Description </td>
+              <td> Priority </td>
+            </th>
             <tr
               onclick={() => {
                 props.onTaskClicked(element.taskId);
               }}
             >
-              <td> ID {element.taskId}</td>
-              <td> Title {element.title}</td>
-              <td> Description {element.description}</td>
-              <td> Priority {element.priority}</td>
+              <td> {element.taskId}</td>
+              <td> {element.title}</td>
+              <td> {element.description}</td>
+              <td> {element.priority}</td>
             </tr>
           </table>
         );
