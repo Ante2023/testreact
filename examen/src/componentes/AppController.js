@@ -3,7 +3,8 @@ import TaskList from "./TaskList";
 import TaskItem from "./TaskItem";
 
 const AppController = () => {
-  const [nombre, setombre] = useState([]);
+  const [taskListItems, setTaskListItems] = useState([]);
+  const[taskClicked,setTaskClicked]= useState("")
 
   useEffect(() => {
     fetch(`http://10.212.160.134:3000/ex1`)
@@ -12,14 +13,17 @@ const AppController = () => {
     // console.log(nombre);
   }, []);
 
-  const getId = (id)=>{
-    console.log(`El id es ${id}`);
+  const onTaskClickedHandled = (id)=>{
+    setTaskClicked(taskListItems.filter(item=>item.id === id)[0])
   }
 
   return (
     <div>
-      <TaskList data={nombre}  getId = {getId}/>
-      <TaskItem data={nombre} />
+      <TaskList data={taskListItems}  onTaskClicked = {onTaskClickedHandled}/>
+      {
+        taskClicked &&
+      <TaskItem task={taskListItems} />
+      }
     </div>
   );
 };
