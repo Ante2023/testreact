@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import TaskList from "./TaskList";
-import TaskItem from "./TaskItem";
+import TaskList from "./TaskList/TaskList";
+import TaskItem from "./TaskItem/TaskItem";
 
 const AppController = () => {
   const [taskListItems, setTaskListItems] = useState([]);
